@@ -1,0 +1,28 @@
+Grading .....
+make: Entering directory '/home/ekalderon/Documents/Projects/cs143/assignments/PA2J'
+java -classpath /home/ekalderon/Documents/Projects/cs143/lib/jlex.jar JLex.Main cool.lex
+Processing first section -- user code.
+Processing second section -- JLex declarations.
+Processing third section -- lexical rules.
+Creating NFA machine representation.
+NFA comprised of 275 states.
+Working on character classes.:.:..:::.::......::::.:...........::...:..:.:.:...::.:......:..:..................:::..:::....:::::..:::...:.:.:....::::.:.:.......
+NFA has 62 distinct character classes.
+Creating DFA transition table.
+Working on DFA states................................................................................................................................................................................
+Minimizing DFA transition table.
+168 states after removal of redundant states.
+Outputting lexical analyzer code.
+mv cool.lex.java CoolLexer.java
+javac -classpath /home/ekalderon/Documents/Projects/cs143/lib/java-cup-11a.jar:/home/ekalderon/Documents/Projects/cs143/lib/jlex.jar:.:/usr/java/lib/rt.jar AbstractSymbol.java AbstractTable.java BoolConst.java CgenSupport.java Flags.java IdSymbol.java IdTable.java IntSymbol.java IntTable.java Lexer.java StringSymbol.java StringTable.java TokenConstants.java Utilities.java CoolLexer.java
+Note: AbstractTable.java uses unchecked or unsafe operations.
+Note: Recompile with -Xlint:unchecked for details.
+echo '#!/bin/sh' >> lexer
+echo 'java -classpath /home/ekalderon/Documents/Projects/cs143/lib/java-cup-11a.jar:/home/ekalderon/Documents/Projects/cs143/lib/jlex.jar:.:/usr/java/lib/rt.jar:`dirname $0` Lexer $*' >> lexer
+chmod 755 lexer
+make: Leaving directory '/home/ekalderon/Documents/Projects/cs143/assignments/PA2J'
+=====================================================================
+submission: ..
+
+=====================================================================
+You got a score of 63 out of 63.
